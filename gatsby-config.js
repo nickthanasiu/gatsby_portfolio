@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-alias-imports`,
-      option: {
+      options: {
         alias: {
           "@components": path.resolve(__dirname, 'src/components')
         },
