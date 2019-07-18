@@ -39,10 +39,17 @@ const StyledCard = styled.div`
     }
 
     @media (min-width: 768px) {
+        
+        
+        /* 
         height: 12rem;
         width: 33%;
         max-width: 12rem;
         margin: 0 .5rem;
+        */
+        
+        
+        margin-bottom: 1rem;
         flex-direction: column;
         align-items: flex-start;
 
@@ -55,7 +62,7 @@ const StyledCard = styled.div`
 
         &:hover {
             padding: 1.125rem;
-            transform: scale(1.1);
+            /*transform: scale(1.1);*/
 
             & svg {
                 transform: translate3d(0, 0, 0);
@@ -78,7 +85,8 @@ const StyledLink = styled.a`
 
     @media (min-width: 768px) {
         position: relative;
-        flex-direction: column;
+        
+        /*flex-direction: column;*/ 
         height: 70%;
         align-items: center;
         justify-content: space-around;

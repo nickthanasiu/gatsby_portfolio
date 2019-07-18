@@ -8,6 +8,8 @@ import Card from "~components/card";
 import { FaGithub, FaChevronRight, FaFolderOpen, FaTv } from 'react-icons/fa';
 
 const StyledHeader = styled.header`
+  max-width: 700px;
+  margin: 0 auto;
   margin-bottom: 4rem;
 `;
 
@@ -44,19 +46,19 @@ const StyledArrowWrapper = styled.div`
         }
 
         @media (min-width: 786px) {
-          display: none;
+          
         }
+`;
+
+const StyledMain = styled.main`
+  max-width: 700px;
+  margin: 0 auto;
 `;
 
 const CardGrid = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-around;
-  }
 `;
 
 const IndexPage = () => (
@@ -77,8 +79,8 @@ const IndexPage = () => (
         </StyledP>
     </StyledHeader>
 
-    <main>
-      <CardGrid>
+    <StyledMain>
+    <CardGrid>
         <Card color={'green'} url="https://github.com/nickthanasiu">
           <FaGithub size={'2rem'} />
           <span>Check out some of my code</span>
@@ -101,7 +103,7 @@ const IndexPage = () => (
           </StyledArrowWrapper>
         </Card>
       </CardGrid>
-    </main>
+    </StyledMain>
   </Layout>
 )
 
