@@ -8,6 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import Helmet from 'react-helmet';
 
 import styled from 'styled-components';
 
@@ -28,7 +29,7 @@ const Container = styled.div`
   }
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, data }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -41,6 +42,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Helmet 
+          title={data.site.siteMetadata.title}
+
+        >
+          <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,700|Roboto+Condensed:400,700&display=swap" rel="stylesheet" />
+        </Helmet>
         <Container>
         <main>{children}</main>
           {/*<footer style={{
