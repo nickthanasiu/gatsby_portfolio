@@ -86,7 +86,7 @@ const IndexPage = () => (
             <FaChevronRight size={'1.25rem'} />
           </StyledArrowWrapper>
         </Card>
-        <Card color={'blue'} url="./about">
+        <Card color={'blue'} url="./projects">
           <FaTv size={'2rem'} />
           <span>View some of my projects</span>
           <StyledArrowWrapper>
