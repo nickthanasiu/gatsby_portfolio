@@ -5,16 +5,27 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+
 import styled from 'styled-components';
 
 const Container = styled.div`
+  
+  background-color: #f2f5f7;
   margin: 0 auto;
   max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
-  padding: 2rem;
+  height: 100vh;
+  padding: 2rem 5rem;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+  //color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 2rem 3rem;
+  }
 `
 
 const Layout = ({ children }) => (
@@ -32,7 +43,10 @@ const Layout = ({ children }) => (
       <>
         <Container>
         <main>{children}</main>
-          <footer>
+          <footer style={{
+            position: 'absolute',
+            bottom: '1rem'
+          }}>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
