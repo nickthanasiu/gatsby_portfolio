@@ -17,14 +17,14 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: 960px;
   height: 100vh;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   transition: all .5s ease;
   //color: #fff;
 
   @media (max-width: 768px) {
-    padding: 2rem 3rem;
+    padding: 2rem 2.5rem;
   }
 `
 
@@ -43,14 +43,14 @@ const Layout = ({ children }) => (
       <>
         <Container>
         <main>{children}</main>
-          <footer style={{
+          {/*<footer style={{
             position: 'absolute',
             bottom: '1rem'
           }}>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          </footer>*/}
         </Container>
       </>
     )}

@@ -24,7 +24,7 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledP = styled.p`
-  font-size: 1.125rem;
+  font-size: 1.3rem;
 `;
 
 
@@ -42,6 +42,21 @@ const StyledArrowWrapper = styled.div`
         & > svg {
             transition: all .25s ease-out;
         }
+
+        @media (min-width: 786px) {
+          display: none;
+        }
+`;
+
+const CardGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
 
 const IndexPage = () => (
@@ -62,27 +77,31 @@ const IndexPage = () => (
         </StyledP>
     </StyledHeader>
 
-    <Card color={'green'} url="https://github.com/nickthanasiu">
-      <FaGithub size={'2rem'} />
-      <span>Check out some of my code</span>
-        <StyledArrowWrapper>
-          <FaChevronRight size={'1.25rem'} />
-        </StyledArrowWrapper>
-    </Card>
-    <Card color={'blue'} url="./about">
-      <FaTv size={'2rem'} />
-      <span>View some of my projects</span>
-      <StyledArrowWrapper>
-        <FaChevronRight size={'1.25rem'} />
-      </StyledArrowWrapper>
-    </Card>
-    <Card color={'green'} url="https://resume.creddle.io/resume/gtsvve2yo8d">
-      <FaFolderOpen size={'2rem'} />
-      <span>View my resume</span>
-      <StyledArrowWrapper>
-        <FaChevronRight size={'1.25rem'} />
-      </StyledArrowWrapper>
-    </Card>
+    <main>
+      <CardGrid>
+        <Card color={'green'} url="https://github.com/nickthanasiu">
+          <FaGithub size={'2rem'} />
+          <span>Check out some of my code</span>
+          <StyledArrowWrapper>
+            <FaChevronRight size={'1.25rem'} />
+          </StyledArrowWrapper>
+        </Card>
+        <Card color={'blue'} url="./about">
+          <FaTv size={'2rem'} />
+          <span>View some of my projects</span>
+          <StyledArrowWrapper>
+            <FaChevronRight size={'1.25rem'} />
+          </StyledArrowWrapper>
+        </Card>
+        <Card color={'green'} url="https://resume.creddle.io/resume/gtsvve2yo8d">
+          <FaFolderOpen size={'2rem'} />
+          <span>View my resume</span>
+          <StyledArrowWrapper>
+            <FaChevronRight size={'1.25rem'} />
+          </StyledArrowWrapper>
+        </Card>
+      </CardGrid>
+    </main>
   </Layout>
 )
 
