@@ -38,17 +38,7 @@ const StyledCard = styled.div`
         }
     }
 
-    @media (min-width: 768px) {
-        
-        
-        /* 
-        height: 12rem;
-        width: 33%;
-        max-width: 12rem;
-        margin: 0 .5rem;
-        */
-        
-        
+    @media (min-width: 768px) {    
         margin-bottom: 1rem;
         flex-direction: column;
         align-items: flex-start;
@@ -60,20 +50,14 @@ const StyledCard = styled.div`
             font-size: 1.125rem;
         } 
 
+    
+
         &:hover {
-            padding: 1.125rem;
-            /*transform: scale(1.1);*/
 
             & svg {
-                transform: translate3d(0, 0, 0);
+                transform: translate3d(8px, 0, 0);
             }
-
-            & span {
-            
         }
-        }
-
-        
     }
 `;
 

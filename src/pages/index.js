@@ -46,7 +46,7 @@ const StyledArrowWrapper = styled.div`
         }
 
         @media (min-width: 786px) {
-          
+          right: 5%;
         }
 `;
 
