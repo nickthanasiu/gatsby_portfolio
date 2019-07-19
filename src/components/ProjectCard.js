@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FaChevronDown } from 'react-icons/fa';
 
 const StyledProjectCard = styled.div`
     position: relative;
@@ -19,21 +20,34 @@ const StyledProjectTitle = styled.h1`
 `;
 
 const StyledImg = styled.img`
-    border: 1px solid red;
-    height: 12rem;
+    height: 15rem;
+    margin-bottom: 2rem;
 `;
 
 const StyledProjectDesc = styled.p`
     font-size: 1rem;
+    display: none;
 `;
 
-const ProjectCard = ({ title, url, imgSrc, desc }) => (
+const ProjectCard = ({
+    title,
+    url,
+    imgSrc,
+    desc,
+    tag
+}) => (
     <a href={url}>
         <StyledProjectCard>
             <StyledProjectTitle>
                 { title }
             </StyledProjectTitle>
             <StyledImg src={imgSrc} />
+            <FaChevronDown
+                style={{
+                border: '1px solid red'
+            }}
+                onClick={() => console.log('clicky')}
+            />
             <StyledProjectDesc>
                 { desc }
             </StyledProjectDesc>
@@ -44,6 +58,9 @@ const ProjectCard = ({ title, url, imgSrc, desc }) => (
 ProjectCard.propTypes = {
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired
 };
 
 
