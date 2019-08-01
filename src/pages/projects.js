@@ -1,28 +1,34 @@
 import React from "react";
-import styled from 'styled-components';
 
 import Layout from "~components/layout";
 import SEO from "~components/seo";
-import ProjectCard from "~components/ProjectCard";
+import ProjectCard from "../components/ProjectCard";
+
+// @TODO: Replace project images with screen capture videos
 
 const myProjects = [
     {
         title: 'Doohnibor',
+        shortDesc: 'Clone of the Robinhood stock trading web-app',
         url: 'http://doohnibor.herokuapp.com',
         imgSrc: `${require('../images/doohnibor_project_screenshot.png')}`,
-        desc: 'Web app clone of Robinhood stock-trading app built with NodeJS.' +
+        longDesc: 'Web app clone of Robinhood stock-trading app built with NodeJS.' +
         ' Users can (fake) buy and sell stocks, add companies to a personal watchlist, look at company profiles with relevant news, and look at portfolio and individual stock trends.' +
-        ' Front-end built with React, Redux, React-Router, Redux Forms, and Passport authentication.' +
+        ' Front-end built with React, Redux, React-Router, and Redux Forms.' +
         ' Backend with Express and Mongoose/MongoDB.',
         tag: 'Toy',
     },
     {
         title: 'Transferable',
         url: 'http://transferable.co',
-        imgSrc: null,
-        desc: 'Early-stage education technology startup',
-        tag: 'Freelance'
+        imgSrc: `${require('../images/transferable_project_screenshot.png')}`,
+        shortDesc: 'Early-stage education technology startup',
+        longDesc: 'I conducted a website refresh for an early-stage education technology startup.' +
+        ' Designed user interface layouts and converted into interactive React application. Integrated application front-end with Strapi API for content management.' +
+        ' Advised client on planning for future application buildout.',
+        tag: 'IRL',
     },
+    /*
     {
         title: 'Jobby Quest',
         url: '#',
@@ -30,6 +36,7 @@ const myProjects = [
         desc: 'App to help me manage job search',
         tag: 'Toy'
     },
+    */
 ];
 
 const Projects = () => (
@@ -41,7 +48,8 @@ const Projects = () => (
                     title={project.title}
                     url={project.url}
                     imgSrc={project.imgSrc}
-                    desc={project.desc}
+                    shortDesc={project.shortDesc}
+                    longDesc={project.longDesc}
                     tag={project.tag}
                 />
             ))}

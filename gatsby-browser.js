@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 700;
     }
 
-    p, span, footer {
+    p, span, footer, div {
         font-family: 'Cabin', sans-serif;
     }
 

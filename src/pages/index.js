@@ -1,11 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
+import { FaGithub, FaChevronRight, FaFolderOpen, FaTv } from 'react-icons/fa';
 
 import Layout from "~components/layout";
 import SEO from "~components/seo";
 import Card from "~components/card";
 
-import { FaGithub, FaChevronRight, FaFolderOpen, FaTv } from 'react-icons/fa';
+
 
 const StyledHeader = styled.header`
   max-width: 700px;
@@ -28,7 +29,6 @@ const StyledH1 = styled.h1`
 const StyledP = styled.p`
   font-size: 1.3rem;
 `;
-
 
 const StyledArrowWrapper = styled.div`
         position: absolute;
