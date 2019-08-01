@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components';
 
 import Layout from "~components/layout";
 import SEO from "~components/seo";
@@ -39,9 +40,58 @@ const myProjects = [
     */
 ];
 
+const StyledHeader = styled.header`
+    margin-bottom: 5rem;
+`;
+
+const StyledTag = styled.div`
+    background-color: ${props => props.toy ? "#ccd9ff": "#3ddead"};
+    color: #000;
+    font-size: .875rem;
+    width: 4rem;
+    height: 2rem;
+    padding: .25rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const StyledKeyRow = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-left: .5rem;
+`;
+
+const StyledKeyParagraph = styled.p`
+    font-size: .875rem;
+    margin-left: 1rem;
+`;
+
+
 const Projects = () => (
     <Layout>
         <SEO title="Projects" />
+        <StyledHeader>
+            <h3>Projects Key</h3>
+            <StyledKeyRow>
+                <StyledTag toy>
+                    Toy
+                </StyledTag>
+                <StyledKeyParagraph>
+                    Projects I've built just for fun / my own enrichment
+                </StyledKeyParagraph>
+            </StyledKeyRow>
+            <StyledKeyRow>
+                <StyledTag>
+                    IRL
+                </StyledTag>
+                <StyledKeyParagraph>
+                    Freelance work
+                </StyledKeyParagraph>
+            </StyledKeyRow>
+        </StyledHeader>
         <main>
             {myProjects.map(project => (
                 <ProjectCard 

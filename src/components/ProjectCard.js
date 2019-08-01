@@ -56,7 +56,7 @@ const StyledTag = styled.div`
 
 const StyledImg = styled.img`
     height: 15rem;
-    margin-bottom: 2rem;
+    margin: 1rem auto 2rem;
     max-width: 30rem;
 
     &:hover {
@@ -83,7 +83,7 @@ const StyledArrowWrapper = styled.div`
     align-items: center;
 
     &:hover {
-        background-color: ${props => props.tag === 'Toy' ? "#ccd9ff": "#3ddead"};
+        background-color: rgba(255, 255, 255, 0.4);
     }
 `;
 
@@ -99,7 +99,6 @@ class ProjectCard extends Component {
     expandProjectCard = e => {
         e.stopPropagation();
         e.preventDefault();
-        console.log('WOOOOOOO');
         this.setState({
             isExpanded: !this.state.isExpanded
         });
