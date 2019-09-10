@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import { toElement as scrollToElement } from '../utils/scroll';
 import {
   FaGithub,
   FaChevronRight,
@@ -137,7 +136,6 @@ const StyledProjectDescription = styled.p`
 `;
 
 const IndexPage = () => {
-  const projectsSection = document.querySelector('.projects-section');
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -176,7 +174,7 @@ const IndexPage = () => {
               <FaChevronRight size={'1.25rem'} />
             </StyledArrowWrapper>
           </Card>
-          <ViewProjects onClick={() => scrollToElement(projectsSection)}>
+          <ViewProjects onClick={() => console.log('clicky clicky')}>
             <span>View some of my projects</span>
             <FaChevronDown size={'1rem'} />
           </ViewProjects>
