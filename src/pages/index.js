@@ -1,6 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
-import { FaGithub, FaChevronRight, FaFolderOpen, FaTv } from 'react-icons/fa';
+import { toElement as scrollToElement } from '../utils/scroll';
+import {
+  FaGithub,
+  FaChevronRight,
+  FaChevronDown,
+  FaFolderOpen,
+} from 'react-icons/fa';
+
+import VideoURL from '../videos/sorting_visualizer.webm';
 
 import Layout from "~components/layout";
 import SEO from "~components/seo";
@@ -14,20 +22,12 @@ const StyledHeader = styled.header`
   margin-bottom: 4rem;
 `;
 
-const BlueSpan = styled.span`
-  color: #0a85ea;
-`;
-
-const GreenSpan = styled.span`
-  color: #23d09c;
-`;
-
 const StyledH1 = styled.h1`
   font-size: 2.5rem;
 `;
 
 const StyledP = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.125rem;
 `;
 
 const StyledArrowWrapper = styled.div`
@@ -61,50 +61,154 @@ const CardGrid = styled.div`
   width: 100%;
 `;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <StyledHeader>
-      <StyledH1>   
-          Hi, I'm <br />
-          <BlueSpan>
+const ViewProjects = styled.div`
+  font-size: .75rem;
+  font-weight: 700;
+  height: 3rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+
+  @media (min-width: 786px) {
+    font-size: .9rem;
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-5px);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+`;
+
+const StyledProjectsSection = styled.section`
+  
+  margin-top: 8rem;
+  min-height: 100vh;
+`;
+
+const StyledProject = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 30rem;
+  padding: 1rem 2rem 2rem;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  box-shadow: 4px 5px 10px rgba(0, 0, 0, .4);
+`;
+
+const StyledProjectTitle = styled.h3`
+  margin-bottom: 2rem;
+`;
+
+const StyledProjectDescription = styled.p`
+  font-size: .9rem;
+  margin-top: 2rem;
+  padding: 0 .5rem;
+`;
+
+const IndexPage = () => {
+  const projectsSection = document.querySelector('.projects-section');
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <StyledHeader>
+        <StyledH1>   
+            Hi, I'm <br />
             Nick Thanasiu...
-          </BlueSpan>
-        </StyledH1>
-        <StyledP>
-          a web developer based in
-          <GreenSpan>
-            {' Toledo, OH'}
-          </GreenSpan>
-        </StyledP>
-    </StyledHeader>
+          </StyledH1>
+          <StyledP>
+            a web developer based in
+            Toledo, OH
+          </StyledP>
+      </StyledHeader>
+  
+      <StyledMain>
+      <CardGrid>
+          <Card 
+            color={'green'}
+            url="https://github.com/nickthanasiu"
+            hasShadow={true}
+          >
+            <FaGithub size={'2rem'} />
+            <span>Check out some of my code</span>
+            <StyledArrowWrapper>
+              <FaChevronRight size={'1.25rem'} />
+            </StyledArrowWrapper>
+          </Card>
+          <Card 
+            color={'blue'}
+            url="https://resume.creddle.io/resume/gtsvve2yo8d"
+            hasShadow={true}
+          >
+            <FaFolderOpen size={'2rem'} />
+            <span>View my resume</span>
+            <StyledArrowWrapper>
+              <FaChevronRight size={'1.25rem'} />
+            </StyledArrowWrapper>
+          </Card>
+          <ViewProjects onClick={() => scrollToElement(projectsSection)}>
+            <span>View some of my projects</span>
+            <FaChevronDown size={'1rem'} />
+          </ViewProjects>
+        </CardGrid>
+        <StyledProjectsSection className="projects-section">
+          <StyledProject>
+            <StyledProjectTitle>
+              Sorting Algorithm Visualizer
+            </StyledProjectTitle>
+            <video autoPlay loop width="100%">
+              <source src={VideoURL} type="video/webm" />
+            </video>
 
-    <StyledMain>
-    <CardGrid>
-        <Card color={'green'} url="https://github.com/nickthanasiu">
-          <FaGithub size={'2rem'} />
-          <span>Check out some of my code</span>
-          <StyledArrowWrapper>
-            <FaChevronRight size={'1.25rem'} />
-          </StyledArrowWrapper>
-        </Card>
-        <Card color={'blue'} url="./projects">
-          <FaTv size={'2rem'} />
+            <StyledProjectDescription>
+            <p>Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.</p>
+            </StyledProjectDescription>
+          </StyledProject>
+        </StyledProjectsSection>
+      </StyledMain>
+    </Layout>
+  );
+};
+
+/*
+<Card 
+          color={'green'}
+          url="#"
+          hasShadow={false}
+        >
           <span>View some of my projects</span>
-          <StyledArrowWrapper>
-            <FaChevronRight size={'1.25rem'} />
-          </StyledArrowWrapper>
-        </Card>
-        <Card color={'green'} url="https://resume.creddle.io/resume/gtsvve2yo8d">
-          <FaFolderOpen size={'2rem'} />
-          <span>View my resume</span>
-          <StyledArrowWrapper>
-            <FaChevronRight size={'1.25rem'} />
-          </StyledArrowWrapper>
-        </Card>
-      </CardGrid>
-    </StyledMain>
-  </Layout>
-)
-
+          <StyledArrowWrapperBottom>
+            <FaChevronDown size={'1.25rem'} />
+          </StyledArrowWrapperBottom>
+        </Card>*/
 export default IndexPage;

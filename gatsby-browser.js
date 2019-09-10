@@ -10,8 +10,9 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         /* Google Fonts import */
-        @import url('https://fonts.googleapis.com/css?family=Cabin|Roboto+Condensed:400,700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+
         font-size: 16px;
         margin: 0;
         max-height: 100vh;
@@ -23,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Roboto Slab', serif;
         font-weight: 700;
     }
 

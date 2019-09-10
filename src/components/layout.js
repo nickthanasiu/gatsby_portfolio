@@ -15,6 +15,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   
   background-color: #f2f5f7;
+  background-color: #fff;
   margin: 0 auto;
   max-width: 960px;
   min-height: 100vh;
