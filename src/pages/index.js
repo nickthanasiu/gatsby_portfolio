@@ -7,7 +7,9 @@ import {
   FaFolderOpen,
 } from 'react-icons/fa';
 
-import VideoURL from '../videos/sorting_visualizer.webm';
+import SortingVideoURL from '../videos/sorting_visualizer.webm';
+import DoohniborVideoURL from '../videos/doohnibor.webm';
+import TransferableVideoURL from '../videos/transferable.webm';
 
 import Layout from "~components/layout";
 import SEO from "~components/seo";
@@ -16,9 +18,14 @@ import Card from "~components/card";
 
 
 const StyledHeader = styled.header`
-  max-width: 700px;
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
 `;
 
 const StyledH1 = styled.h1`
@@ -50,14 +57,21 @@ const StyledArrowWrapper = styled.div`
 `;
 
 const StyledMain = styled.main`
-  max-width: 700px;
+  width: 100%;
+  max-width: 100vw;
   margin: 0 auto;
+  border: 1px solid red;
+
+  padding: 0 1rem;
 `;
 
 const CardGrid = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
   width: 100%;
+  margin: 0 auto;
 `;
 
 const ViewProjects = styled.div`
@@ -109,32 +123,78 @@ const ViewProjects = styled.div`
 `;
 
 const StyledProjectsSection = styled.section`
-  
-  margin-top: 8rem;
   min-height: 100vh;
+  margin-top: 8rem;
+  margin: 8rem -50% 0;
+  padding: 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const StyledProject = styled.div`
+  background-color: #000;
+  background-color: rgb(23, 21, 21);
   box-sizing: border-box;
   width: 100%;
+  max-width: 800px;
   min-height: 30rem;
+  margin-bottom: 6rem;
+  
   padding: 1rem 2rem 2rem;
   cursor: pointer;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  box-shadow: 4px 5px 10px rgba(0, 0, 0, .4);
+
+
+  @media (max-width: 786px) {
+    border: 1px solid red;
+  }
 `;
 
 const StyledProjectTitle = styled.h3`
   margin-bottom: 2rem;
+  font-size: 1.375rem;
+  font-weight: 700;
 `;
 
 const StyledProjectDescription = styled.p`
-  font-size: .9rem;
-  margin-top: 2rem;
-  padding: 0 .5rem;
+  font-size: .875rem;
+  max-width: 500px;
 `;
 
+const SkillTagsSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+`;
+
+const SkillTag = styled.div`
+  background-color: rgb(166, 192, 254);
+  color: rgb(7, 81, 191);
+  margin-right: 1rem;
+  padding: .25rem .5rem;
+  font-size: .75rem;
+`;
+
+const ViewProjectSection = styled.div`
+  padding-top: 1rem;
+`;
+
+const ViewProjectLink = styled.a`
+  box-sizing: border-box; 
+  cursor: pointer;
+  background-color: ${props => (
+    props.primary ? 'rgb(7, 81, 191)' : 'inherit'
+  )};
+  color: ${props => props.primary ? '#fff' : 'rgb(7, 81, 191)'};
+  border: 1px solid rgb(7, 81, 191);
+  margin-right: 1rem;
+  padding: .5rem 1rem;
+  font-size: .75rem;
+`
 const IndexPage = () => {
   return (
     <Layout>
@@ -185,12 +245,121 @@ const IndexPage = () => {
               Sorting Algorithm Visualizer
             </StyledProjectTitle>
             <video autoPlay loop width="100%">
-              <source src={VideoURL} type="video/webm" />
+              <source src={SortingVideoURL} type="video/webm" />
             </video>
-
+            <SkillTagsSection>
+              <SkillTag>
+                Javascript / ES6
+              </SkillTag>
+              <SkillTag>
+                React
+              </SkillTag>
+              <SkillTag>
+                Redux
+              </SkillTag>
+              <SkillTag >
+                Styled Components
+              </SkillTag>
+            </SkillTagsSection>
             <StyledProjectDescription>
-            <p>Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.Here's a brief description of the project.</p>
+              A tool to help understand various sorting algorithms by visualizing
+              how the algorithms iterate over an array. Built with React, Redux, and
+              Styled Components. This project was my first foray into React's Hooks API,
+              and it utilizes the Context API to implement a dark mode. 
             </StyledProjectDescription>
+            <ViewProjectSection>
+              <ViewProjectLink href="#" primary>
+                View Project
+              </ViewProjectLink>
+              <ViewProjectLink href="#">
+                View Code
+              </ViewProjectLink>
+            </ViewProjectSection>
+          </StyledProject>
+          <StyledProject>
+            <StyledProjectTitle>
+              Doohnibor (Robinhood Clone)
+            </StyledProjectTitle>
+            <video autoPlay loop width="100%">
+              <source src={DoohniborVideoURL} type="video/webm" />
+            </video>
+            <SkillTagsSection>
+              <SkillTag >
+                Javascript / ES6
+              </SkillTag>
+              <SkillTag>
+                React
+              </SkillTag>
+              <SkillTag>
+                Redux
+              </SkillTag>
+              <SkillTag >
+                CSS/SCSS
+              </SkillTag>
+              <SkillTag >
+                Node.js
+              </SkillTag>
+              <SkillTag >
+                Express
+              </SkillTag>
+              <SkillTag >
+                MongoDB
+              </SkillTag>
+            </SkillTagsSection>
+            <StyledProjectDescription>
+              A tool to help understand various sorting algorithms by visualizing
+              how the algorithms iterate over an array. Built with React, Redux, and
+              Styled Components. This project was my first foray into React's Hooks API,
+              and it utilizes the Context API to implement a dark mode. 
+            </StyledProjectDescription>
+            <ViewProjectSection>
+              <ViewProjectLink href="#" primary>
+                View Project
+              </ViewProjectLink>
+              <ViewProjectLink href="#">
+                View Code
+              </ViewProjectLink>
+            </ViewProjectSection>
+          </StyledProject>
+          <StyledProject>
+            <StyledProjectTitle>
+              Transferable
+            </StyledProjectTitle>
+            <video autoPlay loop width="100%">
+              <source src={TransferableVideoURL} type="video/webm" />
+            </video>
+            <SkillTagsSection>
+              <SkillTag >
+                Javascript / ES6
+              </SkillTag>
+              <SkillTag>
+                Gatsby
+              </SkillTag>
+              <SkillTag >
+                CSS/SCSS
+              </SkillTag>
+              <SkillTag>
+                Node.js
+              </SkillTag>
+              <SkillTag>
+                Strapi (Headless CMS)
+              </SkillTag>
+              
+            </SkillTagsSection>
+            <StyledProjectDescription>
+              A tool to help understand various sorting algorithms by visualizing
+              how the algorithms iterate over an array. Built with React, Redux, and
+              Styled Components. This project was my first foray into React's Hooks API,
+              and it utilizes the Context API to implement a dark mode. 
+            </StyledProjectDescription>
+            <ViewProjectSection>
+              <ViewProjectLink href="#" primary>
+                View Project
+              </ViewProjectLink>
+              <ViewProjectLink href="#">
+                View Code
+              </ViewProjectLink>
+            </ViewProjectSection>
           </StyledProject>
         </StyledProjectsSection>
       </StyledMain>

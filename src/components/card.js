@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledCard = styled.div`
     position: relative;
-    background-color: #fff;
+    background-color: rgb(23, 21, 21);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +12,7 @@ const StyledCard = styled.div`
     box-shadow: ${props => (
         props.hasShadow ? '0 2px 4px 0 rgba(14,30,37,.12)' : 'none'
     )};
+    
     margin-bottom: 1.375rem;
     cursor: pointer;
 
@@ -19,7 +20,7 @@ const StyledCard = styled.div`
 
     & span {
         margin-left: 1rem;
-        font-weight: 700;
+        font-weight: 300;
         width: 50%;
     } 
 
@@ -57,7 +58,7 @@ const StyledCard = styled.div`
 
         & span {
             margin-left: 1rem;
-            font-weight: 700;
+            font-weight: 400;
             width: 100%;
             font-size: .9rem;
         } 

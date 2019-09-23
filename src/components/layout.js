@@ -15,19 +15,15 @@ import styled from 'styled-components';
 const Container = styled.div`
   
   background-color: #f2f5f7;
-  background-color: #fff;
+  background-color: #000;
   margin: 0 auto;
-  max-width: 960px;
+  min-width: 100vw;
   min-height: 100vh;
-  padding: 2rem 4rem;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   transition: all .5s ease;
   //color: #fff;
 
-  @media (max-width: 768px) {
-    padding: 2rem 2.5rem;
-  }
 `
 
 const Layout = ({ children, data }) => (

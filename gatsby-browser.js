@@ -10,7 +10,8 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         /* Google Fonts import */
-        @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
 
         font-size: 16px;
@@ -24,12 +25,14 @@ const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Cabin', sans-serif;
         font-weight: 700;
+        color: #fff;
     }
 
     p, span, footer, div {
         font-family: 'Cabin', sans-serif;
+        color: #fff;
     }
 
     a {
