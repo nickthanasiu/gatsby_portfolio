@@ -244,7 +244,7 @@ const IndexPage = () => {
             <StyledProjectTitle>
               Sorting Algorithm Visualizer
             </StyledProjectTitle>
-            <video autoPlay loop width="100%">
+            <video autoPlay loop muted width="100%">
               <source src={SortingVideoURL} type="video/webm" />
             </video>
             <SkillTagsSection>
@@ -280,7 +280,7 @@ const IndexPage = () => {
             <StyledProjectTitle>
               Doohnibor (Robinhood Clone)
             </StyledProjectTitle>
-            <video autoPlay loop width="100%">
+            <video autoPlay loop muted width="100%">
               <source src={DoohniborVideoURL} type="video/webm" />
             </video>
             <SkillTagsSection>
@@ -325,7 +325,7 @@ const IndexPage = () => {
             <StyledProjectTitle>
               Transferable
             </StyledProjectTitle>
-            <video autoPlay loop width="100%">
+            <video autoPlay loop muted width="100%">
               <source src={TransferableVideoURL} type="video/webm" />
             </video>
             <SkillTagsSection>
