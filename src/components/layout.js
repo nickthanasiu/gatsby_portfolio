@@ -17,7 +17,7 @@ const Container = styled.div`
   background-color: #f2f5f7;
   background-color: #000;
   margin: 0 auto;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;

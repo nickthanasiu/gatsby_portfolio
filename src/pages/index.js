@@ -19,7 +19,7 @@ import Card from "~components/card";
 
 const StyledHeader = styled.header`
   max-width: 800px;
-  width: 100%;
+  
   margin: 0 auto;
   margin-bottom: 4rem;
   display: flex;
@@ -69,7 +69,8 @@ const StyledArrowWrapper = styled.div`
 `;
 
 const StyledMain = styled.main`
-  max-width: 100vw;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 
   padding: 0 1rem;
@@ -133,10 +134,8 @@ const ViewProjects = styled.div`
   }
 `;
 
-const StyledProjectsSection = styled.section`
-  min-height: 100vh;
-  margin-top: 8rem;
-  margin: 8rem -50% 0;
+const StyledProjectsSection = styled.section`  
+  margin: 8rem auto 0;
   padding: 5rem 0;
 
   display: flex;
@@ -161,7 +160,7 @@ const StyledProject = styled.div`
 
 
   @media (max-width: 786px) {
-    width: 50%;
+    width: 100%;
   }
 `;
 
@@ -290,7 +289,8 @@ const IndexPage = () => {
           </StyledProject>
           <StyledProject>
             <StyledProjectTitle>
-              Doohnibor (Robinhood Clone)
+              Doohnibor  <br />
+              (Robinhood Clone)
             </StyledProjectTitle>
             <video autoPlay loop muted width="100%">
               <source src={DoohniborVideoURL} type="video/webm" />

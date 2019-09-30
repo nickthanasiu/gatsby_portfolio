@@ -20,8 +20,12 @@ const GlobalStyles = createGlobalStyle`
         @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
 
         font-size: 16px;
+        width: 100%;
         margin: 0;
-        max-height: 100vh;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 
     h1,
