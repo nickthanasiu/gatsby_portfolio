@@ -6,6 +6,11 @@ import { ScreenSizeProvider } from '~context/screenSizeContext';
 const GlobalStyles = createGlobalStyle`
     html {
         box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
     }
 
     body {

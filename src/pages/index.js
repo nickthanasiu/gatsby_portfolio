@@ -26,14 +26,26 @@ const StyledHeader = styled.header`
   flex-direction: column;
   justify-content: center;
   background-color: #000;
+
+  @media (max-width: 786px) {
+    padding: 0 1.5rem;
+  }
 `;
 
 const StyledH1 = styled.h1`
   font-size: 2.5rem;
+
+  @media (max-width: 600px) {
+    font-size: 2.25rem;
+  }
 `;
 
 const StyledP = styled.p`
   font-size: 1.125rem;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 const StyledArrowWrapper = styled.div`
@@ -57,10 +69,8 @@ const StyledArrowWrapper = styled.div`
 `;
 
 const StyledMain = styled.main`
-  width: 100%;
   max-width: 100vw;
   margin: 0 auto;
-  border: 1px solid red;
 
   padding: 0 1rem;
 `;
@@ -78,7 +88,8 @@ const ViewProjects = styled.div`
   font-size: .75rem;
   font-weight: 700;
   height: 3rem;
-  margin-top: 2rem;
+
+  margin: 2rem auto 0;
   cursor: pointer;
   display: flex;
   justify-content: space-around;
@@ -138,9 +149,9 @@ const StyledProject = styled.div`
   background-color: #000;
   background-color: rgb(23, 21, 21);
   box-sizing: border-box;
-  width: 100%;
+  margin: 0 auto;
   max-width: 800px;
-  min-height: 30rem;
+  {/*min-height: 30rem;*/}
   margin-bottom: 6rem;
   
   padding: 1rem 2rem 2rem;
@@ -150,7 +161,7 @@ const StyledProject = styled.div`
 
 
   @media (max-width: 786px) {
-    border: 1px solid red;
+    width: 50%;
   }
 `;
 
@@ -175,6 +186,7 @@ const SkillTag = styled.div`
   background-color: rgb(166, 192, 254);
   color: rgb(7, 81, 191);
   margin-right: 1rem;
+  margin-bottom: .5rem;
   padding: .25rem .5rem;
   font-size: .75rem;
 `;
@@ -268,10 +280,10 @@ const IndexPage = () => {
               and it utilizes the Context API to implement a dark mode. 
             </StyledProjectDescription>
             <ViewProjectSection>
-              <ViewProjectLink href="#" primary>
+              <ViewProjectLink href="https://reverent-noether-2b9825.netlify.com/" primary>
                 View Project
               </ViewProjectLink>
-              <ViewProjectLink href="#">
+              <ViewProjectLink href="https://github.com/nickthanasiu/sorting_algorithm_visualizer">
                 View Code
               </ViewProjectLink>
             </ViewProjectSection>
@@ -313,10 +325,10 @@ const IndexPage = () => {
               and it utilizes the Context API to implement a dark mode. 
             </StyledProjectDescription>
             <ViewProjectSection>
-              <ViewProjectLink href="#" primary>
+              <ViewProjectLink href="http://doohnibor.herokuapp.com/" primary>
                 View Project
               </ViewProjectLink>
-              <ViewProjectLink href="#">
+              <ViewProjectLink href="https://github.com/nickthanasiu/doohnibor">
                 View Code
               </ViewProjectLink>
             </ViewProjectSection>
@@ -353,11 +365,8 @@ const IndexPage = () => {
               and it utilizes the Context API to implement a dark mode. 
             </StyledProjectDescription>
             <ViewProjectSection>
-              <ViewProjectLink href="#" primary>
+              <ViewProjectLink href="http://transferable.co/" primary>
                 View Project
-              </ViewProjectLink>
-              <ViewProjectLink href="#">
-                View Code
               </ViewProjectLink>
             </ViewProjectSection>
           </StyledProject>
