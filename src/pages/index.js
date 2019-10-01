@@ -245,7 +245,7 @@ const IndexPage = () => {
               <FaChevronRight size={'1.25rem'} />
             </StyledArrowWrapper>
           </Card>
-          <ViewProjects onClick={() => console.log('clicky clicky')}>
+          <ViewProjects>
             <span>View some of my projects</span>
             <FaChevronDown size={'1rem'} />
           </ViewProjects>
@@ -319,10 +319,13 @@ const IndexPage = () => {
               </SkillTag>
             </SkillTagsSection>
             <StyledProjectDescription>
-              A tool to help understand various sorting algorithms by visualizing
-              how the algorithms iterate over an array. Built with React, Redux, and
-              Styled Components. This project was my first foray into React's Hooks API,
-              and it utilizes the Context API to implement a dark mode. 
+              Doohnibor is a clone of the stock trading platform Robinhood's web app.
+              Users can buy and sell stocks in a simulated environment,
+              add companies to a personal watchlist, look at
+              company profiles with a newsfeed of relevant stories,
+              and view portfolio and individual stock trends.
+              The front-end is built with React and utilizes Redux
+              for state-management. The server and API are built with Node, Express and MongoDB.
             </StyledProjectDescription>
             <ViewProjectSection>
               <ViewProjectLink href="http://doohnibor.herokuapp.com/" primary>
@@ -345,7 +348,7 @@ const IndexPage = () => {
                 Javascript / ES6
               </SkillTag>
               <SkillTag>
-                Gatsby
+                React
               </SkillTag>
               <SkillTag >
                 CSS/SCSS
@@ -359,10 +362,10 @@ const IndexPage = () => {
               
             </SkillTagsSection>
             <StyledProjectDescription>
-              A tool to help understand various sorting algorithms by visualizing
-              how the algorithms iterate over an array. Built with React, Redux, and
-              Styled Components. This project was my first foray into React's Hooks API,
-              and it utilizes the Context API to implement a dark mode. 
+              I conducted a marketing website refresh for an early-stage education
+              technology startup. This involved designing user interface layouts
+              and converting into a React app. Static assets are hosted on Cloudinary
+              and blog content is retrieved from a Node.js based headless CMS called Strapi.
             </StyledProjectDescription>
             <ViewProjectSection>
               <ViewProjectLink href="http://transferable.co/" primary>
